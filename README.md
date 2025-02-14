@@ -20,6 +20,7 @@ To complete this project, ensure the following tools and software are installed:
 ---
 
 ## About Bike Share Data
+
 Bicycle-sharing systems allow short-term bike rentals, enabling users to travel between locations or take recreational rides. These systems are supported by technologies that track rentals and returns, offering a rich dataset for analysis. The focus of this project is on data from the first six months of 2017, provided by [Motivate](https://www.motivateco.com/), a major bike share operator.
 
 This data includes information on:
@@ -62,20 +63,24 @@ These files are pre-processed to focus on the core six columns. If interested, y
 Your goal is to calculate the following descriptive statistics:
 
 ### 1. **Popular Times of Travel**
+
    - Most common month
    - Most common day of the week
    - Most common hour of the days
 
 ### 2. **Popular Stations and Trips**
+
    - Most common start station
    - Most common end station
    - Most frequent trip (start to end station combination)
 
 ### 3. **Trip Duration**
+
    - Total travel time
    - Average travel time
 
 ### 4. **User Information**
+
    - Count of user types
    - Count of genders (only for NYC and Chicago)
    - Earliest, most recent, and most common birth years (only for NYC and Chicago)
@@ -96,6 +101,7 @@ These files can be downloaded as a zipped package in the resource tab of the cla
 ---
 
 ## Suggested Libraries
+
 It is highly recommended to use **NumPy** and **pandas** for this project. These libraries are industry-standard tools for data analysis in Python and provide efficient methods for handling and analyzing data.
 
 ---
@@ -105,16 +111,16 @@ It is highly recommended to use **NumPy** and **pandas** for this project. These
 Begin by exploring the dataset using pandas. Here’s how you can get started:
 
 ### Questions to Answer:
+
 1. What are the column names in the dataset?
 2. Are there missing values?
 3. What data types are in each column?
 
 ### Useful pandas Methods:
+
 - `df.head()` – Displays the first few rows of the dataset.
 - `df.columns` – Lists the column names.
 - `df.info()` – Provides a summary of the dataset, including data types and missing values.
 - `df.describe()` – Summarizes statistics for numerical columns.
 - `df['column_name'].value_counts()` – Shows the count of unique values in a column.
-- `df['column_name'].unique()` – Lists unique values in a column.  
-
-
+- `df['column_name'].unique()` – Lists unique values in a column.

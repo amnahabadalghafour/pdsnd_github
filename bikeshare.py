@@ -2,7 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-# Dictionary to map city names to their respective data files
 CITY_DATA = {
     'chicago': 'chicago.csv',
     'new york city': 'new_york_city.csv',
@@ -23,6 +22,7 @@ def get_filters():
         valid_cities, 
         case_insensitive=True
     )
+    
     # Prompt user for filter type
 
     valid_filters = ['month', 'day', 'both', 'none']
@@ -32,11 +32,9 @@ def get_filters():
         case_insensitive=True
     ).lower()
     
-    # Initialize filters
     month = 'none'
     day = 0
 
-    # Prompt for specific month if applicable
     if choice in ['both', 'month']:
         valid_months = ['January', 'February', 'March', 'April', 'May', 'June']
         month = input_with_validation(
@@ -44,8 +42,6 @@ def get_filters():
             valid_months, 
             case_insensitive=True
         ).title()
-
-    # Prompt for specific day if applicable
     if choice in ['both', 'day']:
         day = input_integer_within_range(
             'Which day? Enter an integer (1=Sunday, ..., 7=Saturday): ', 
