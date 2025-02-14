@@ -22,7 +22,7 @@ def get_filters():
         valid_cities, 
         case_insensitive=True
     )
-    
+
     # Prompt user for filter type
 
     valid_filters = ['month', 'day', 'both', 'none']
@@ -206,10 +206,9 @@ def main():
         trip_duration_stats(df)
         user_stats(df, city)
 
-        # Call display_data to handle raw data display
         display_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
+        restart = input('\nWould you like to restart? yes or no.\n').lower()
         if restart != 'yes':
             break
 
